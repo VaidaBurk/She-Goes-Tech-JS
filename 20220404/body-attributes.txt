@@ -1,0 +1,6 @@
+text="color": color of body text.
+bgcolor="color": background color.
+background="url": URL of an image to be used as the background.
+link="color": color of un-visited links.
+vlink="color": color of visited links.
+alink="color": color of active (clicked) links.
