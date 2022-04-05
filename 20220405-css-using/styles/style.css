@@ -1,0 +1,37 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+}
+
+h2 {
+    color: grey;
+}
+
+.header {
+    margin-bottom: 0px;
+}
+
+.green-tea {
+    color: green;
+}
+
+.raspberry-juice {
+    color: blue;
+}
+
+.blueberries {
+    color: blueviolet;
+}
+
+.cranberries {
+    color: darkred;
+}
+
+.year {
+    background: #000;
+    color: white;
+}
+
+p > img {
+    width: 50px;
+}
