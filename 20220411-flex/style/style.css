@@ -21,9 +21,9 @@ h5 {
 }
 
 .header {
+    flex-direction: column;
     align-content: center;
     border-bottom: solid white 4px;
-    flex-direction: column;
 }
 
 .logo {
@@ -38,7 +38,7 @@ h5 {
 .navigation {
     display: flex;
     background-color: #92cc8f;
-    font-size: small;
+    font-size: 8pt;
 }
 
 .nav-item {
@@ -51,6 +51,7 @@ h5 {
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
+    border-bottom: solid white 4px;
     padding: 15px;
 }
 
@@ -64,15 +65,16 @@ h5 {
     padding-right: 20px;
 }
 
-.left-part ul {
+ul {
     font-size: 7pt;
     line-height: 10pt;
-    list-style: disc;
+    margin-left: 30px;
+    padding: 0;
+    list-style: square;
 }
 
 .left-part a {
     color: #698f57;
-
 }
 
 .right-part {
@@ -105,4 +107,26 @@ img {
 
 .services {
     display: flex;
+}
+
+.comp-name {
+    position: absolute;
+    top: 40px;
+    margin-right: 40px;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer h6 {
+    color: white;
+    margin-left: 20px;
+    margin: 10px;
+}
+
+.footer a {
+    color: grey;
 }

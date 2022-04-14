@@ -1,0 +1,66 @@
+.parent-grid {
+    display: grid;
+    /* display: inline-grid; --takes only space to fit elements */
+}
+
+.parent-grid-rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* or */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 10px;
+    /* gap: vertical horizontal */
+}
+
+.item {
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+    font-family: monospace;
+}
+
+.container {  display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 2fr 1.9fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "left content"
+      "footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .left { grid-area: left; }
+  
+  .content { grid-area: content; }
+  
+  .footer { grid-area: footer; }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .nav-item {
+      margin-right: 30px;
+  }
+
+  .comp-name {
+      position: absolute;
+      top: 7%;
+  }
+
+  img {
+    width: 10%;
+  }
+
+  
+  

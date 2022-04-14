@@ -1,0 +1,4 @@
+https://grid.layoutit.com/ -- css grid generator
+https://unsplash.com/ -- free images
+https://fonts.google.com/ -- google fonts
+https://www.figma.com/community -- ready designs
