@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="title">Text of title</h2>
+    <a id="nav" href="index.html">HOME</a>
+    <button id="changeColor">Change color</button>
+</body>
+
+<script>
+    let textToElement = document.createTextNode('Next day will be even better!');
+    let newElement = document.createElement('h1');
+    newElement.appendChild(textToElement);
+    document.body.appendChild(newElement);
+    console.log(newElement);
+
+    let textToHElement = document.createTextNode('This day is fine!');
+
+    let beforeHElement = document.createElement('h3');
+    beforeHElement.appendChild(textToHElement);
+    let titleH = document.getElementById('title');
+    document.body.insertBefore(beforeHElement, titleH);
+
+    document.body.style.backgroundColor = "pink";
+    let backgroundColorBtn = document.getElementById("changeColor");
+    backgroundColorBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = "grey";
+    })
+
+    let navLink = document.getElementById("nav");
+    console.log(navLink.href);
+    navLink.href = "https://www.codecademy.com/courses/introduction-to-javascript/informationals/learn-javascript-welcome";
+    let navText = document.getElementById("nav");
+    navLink.text = "Go learning!";
+
+    const paragraph = document.createElement('p');
+    const h1 = document.createElement('h1');
+
+    h1.textContent = "Cool text!";
+
+    paragraph.innerHTML = "My text is bold <em>Raimonds</em> text"
+    console.log(h1);
+    console.log(paragraph);
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: pink;
+        }
+
+        h2 {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Topics</h2>
+    <div class="container">
+        <img style="width: 500px;" src="/img/trex.webp"
+            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p id="titleHead">Here we will add a link to the <a href="https://www.mozilla.org/%22%3EMozilla">Homepage</a>
+        </p>
+    </div>
+    <div class="container">
+        <p id="titleHead">Here we will add a link to the <a href="https://www.mozilla.org/%22%3EMozilla">Homepage</a>
+        </p>
+    </div>
+
+</body>
+
+<script>
+    let elementTag = document.getElementsByTagName("p");
+    console.log(elementTag);
+
+    let elementClass = document.getElementsByClassName("container");
+    console.log(elementClass);
+
+    let elementId = document.getElementById('titleHead');
+    console.log(elementId);
+
+    let elementQuerrySelector = document.querySelector(".container");
+    console.log(elementQuerrySelector);
+</script>
+
+</html>

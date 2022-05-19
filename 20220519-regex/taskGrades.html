@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table" id="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Mark</th>
+            <th scope="col">Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+</body>
+<script>
+    let students = [
+        {name: "Tom", mark: 91},
+        {name: "Ana", mark: 78},
+        {name: "Elina", mark: 35},
+        {name: "Vanessa", mark: 85}
+    ];
+
+    let tbody = document.getElementById('table').getElementsByTagName('tbody')[0];
+    let grade;
+    let tbodyHtml = '';
+    
+    for (let student of students) {
+        if (student.mark < 70){
+            grade = 'D';
+            tbodyHtml = tbodyHtml + `<tr><td>${student.name}</td><td>${student.mark}</td><td>${grade}</td></tr>`;
+            tbody.innerHTML = tbodyHtml;
+        }
+        else if (student.mark < 80){
+            grade = 'C';
+            tbodyHtml = tbodyHtml + `<tr><td>${student.name}</td><td>${student.mark}</td><td>${grade}</td></tr>`;
+            tbody.innerHTML = tbodyHtml;
+        }
+        else if (student.mark < 90){
+            grade = 'B';
+            tbodyHtml = tbodyHtml + `<tr><td>${student.name}</td><td>${student.mark}</td><td>${grade}</td></tr>`;
+            tbody.innerHTML = tbodyHtml;
+        }
+        else if (student.mark < 100){
+            grade = 'A';
+            tbodyHtml = tbodyHtml + `<tr><td>${student.name}</td><td>${student.mark}</td><td>${grade}</td></tr>`;
+            tbody.innerHTML = tbodyHtml;
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>

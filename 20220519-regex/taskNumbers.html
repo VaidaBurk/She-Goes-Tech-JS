@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Please enter number from 0 to 4:</p>
+    <input id="numberToCheck" type="number">
+    <button onclick="checkValue()">Check</button>
+    <p id="answer"></p>
+</body>
+<script>
+    for (let i = 0; i < 5; i++) {
+        if (i % 2 == 0){
+            console.log("Even number");
+        } else {
+            console.log("Odd number");
+        }
+    }
+
+    function checkValue(){
+        let inputValue = document.getElementById('numberToCheck').value;
+        let answerField = document.getElementById('answer');
+        if (inputValue < 0 || inputValue > 4){
+            answerField.innerText = "Wrong number enterd." ;
+        }
+        else if (inputValue%2 == 0){
+            answerField.innerText = "Number " + inputValue + " is even.";
+        }
+        else {
+            answerField.innerText = "Number " + inputValue + " is odd.";
+        }
+    }
+</script>
+</html>
