@@ -1,0 +1,17 @@
+#container {
+    font-family: 'Courier New', Courier, monospace;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#dayName {
+    font-family: 'Ms Madi', cursive;
+    font-size: 60px;
+    color: white;
+}
+
+#message {
+    color: #300c4a;
+}
