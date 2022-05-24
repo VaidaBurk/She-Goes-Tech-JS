@@ -1,0 +1,108 @@
+.main {
+    font-family: calibri, sans-serif;
+    width: 1000px;
+    margin-left: calc((100% - 1000px) / 2);
+}
+
+.header {
+    width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+    color: #233c51;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+hr { 
+    width: 10%;
+    height: 5px;
+    background-color: goldenrod;
+    border: none;
+    margin-top: 5px;
+}
+
+#menu-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 420px;
+    margin: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 2px lightgray solid;
+    padding: 2px 0 5px 0;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+    color: #233c51;
+}
+
+.price {
+    color: goldenrod;
+}
+
+.desc {
+    color: #8a9ebf;
+}
+
+.image {
+    display: block;
+    width: 220px;
+    margin-right: 10px;
+}
+
+img {
+    width: 90%;
+    border: 3px goldenrod solid;
+    border-radius: 8px;
+}
+
+.filter-btns {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+button {
+    margin: 10px;
+    padding: 7px 15px 7px 15px;
+    border: solid 2px goldenrod;
+    border-radius: 8px;
+    background-color: white;
+    color: goldenrod;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px 5px #0003;
+}
+
+@media screen and (max-width: 1000px) {
+    #menu-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

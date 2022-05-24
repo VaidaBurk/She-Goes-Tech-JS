@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div>Our Menu</div>
+            <hr>
+        </div>
+        <div class="filter-btns">
+            <button onclick="displayMenu(menu)">All</button>
+            <button onclick="filterByCategory('breakfast')">Breakfast</button>
+            <button onclick="filterByCategory('lunch')">Lunch</button>
+            <button onclick="filterByCategory('shakes')">Shakes</button>
+            <button onclick="filterByCategory('dinner')">Dinner</button>
+        </div>
+        <div id="menu-container">
+            <div class="container">
+                <div class="image">
+                    <img src="/img/breakfast.jpg" alt="breakfast">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <div>Breakfast</div>
+                        <div>13.99</div>
+                    </div>
+                    <div class="desc">description</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
