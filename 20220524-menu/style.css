@@ -25,7 +25,7 @@ hr {
     margin-top: 5px;
 }
 
-.filter-btns {
+.category-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,8 +51,16 @@ button:hover {
 
 #menu-container {
     display: flex;
-    justify-content: center;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+}
+
+#all-menu-items {
+    width: 920px;;
+    display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     margin: auto;
 }
 
@@ -102,13 +110,19 @@ img {
     border-radius: 8px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1600px) {
     .main {
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 950px) {
+    #all-menu-items {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .menu-item {
         display: flex;
         flex-direction: column;
@@ -117,5 +131,11 @@ img {
 
     .image {
         margin-bottom: 20px;
+        width: 70%;
+    }
+
+    .menu-item {
+        width: 300px;
+        margin: 10px;
     }
 }

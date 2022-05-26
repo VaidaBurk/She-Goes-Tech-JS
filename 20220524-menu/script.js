@@ -81,34 +81,33 @@ let menu = [
     },
 ]
 
-let menuContainer = document.getElementById('menu-container');
+
+const filterBtns = document.getElementsByClassName('filter-btns');
+const menuContainer = document.getElementById('all-menu-items');
 displayMenu(menu);
 
-let filterBtns = document.getElementsByClassName('filter-btns');
-
-function filterByCategory(category) {
-    console.log(category);
-    let filteredItems = menu.filter(item => item.category == category)
-    displayMenu(filteredItems);
-}
-
 function displayMenu(menu) {
-    let displayMenuItems = menu.map(function(item) {
+    let displayMenuItems = menu.map(function (item) {
         return `
         <div class="menu-item">
             <div class="image">
                 <img src=${item.img} alt="image">
             </div>
             <div class="item-info">
-                <div class="title">
-                    <div>${item.title}</div>
-                    <div class="price">$${item.price}</div>
-                </div>
+            <div class="title">
+                <div>${item.title}</div>
+                <div class="price">$${item.price}</div>
+            </div>
                 <div class="desc">${item.desc}</div>
             </div>
         </div>`
     })
-    
+
     displayMenuItems = displayMenuItems.join('');
     menuContainer.innerHTML = displayMenuItems;
+}
+
+function filterByCategory(category) {
+    const filteredItems = menu.filter(item => item.category == category)
+    displayMenu(filteredItems);
 }
