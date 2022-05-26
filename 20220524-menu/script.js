@@ -95,11 +95,11 @@ function filterByCategory(category) {
 function displayMenu(menu) {
     let displayMenuItems = menu.map(function(item) {
         return `
-        <div class="container">
+        <div class="menu-item">
             <div class="image">
                 <img src=${item.img} alt="image">
             </div>
-            <div class="info">
+            <div class="item-info">
                 <div class="title">
                     <div>${item.title}</div>
                     <div class="price">$${item.price}</div>
