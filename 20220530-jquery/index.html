@@ -29,6 +29,10 @@
         input {
             padding: 5px;
         }
+        .buttons {
+            align-self: center;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -36,9 +40,11 @@
         <h1>SEARCH</h1>
         <form>
             <input id="search" type="text" placeholder="search..." style="text-align: center;">
-            <button>Search</button>
-            <button>Clear</button>
         </form>
+        <div class="buttons">
+            <button>Search</button>
+            <button id="clear-btn">Clear</button>
+        </div>
         <div>
             <ul id="list-items">
     

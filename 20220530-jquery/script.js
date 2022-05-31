@@ -28,28 +28,42 @@ const people = [
 ];
 
 let searchInputEl = document.getElementById("search");
+let listItems = document.getElementById('list-items');
+let clearButton = document.getElementById('clear-btn');
+
+clearButton.addEventListener('click', () => {
+    searchInputEl.value = "";
+    clearFoundItemsList();
+})
 
 searchInputEl.addEventListener('input', text => {
     let valueInput = text.target.value;
-    console.log(valueInput);
-
-    let valueFind = people.filter(person => person.name.includes(valueInput.toLowerCase()));
-    console.log(valueFind);
+    people.filter(person => person.name.includes(valueInput.toLowerCase()));
 
     try {
-        displayItems(valueFind);
+        if(valueInput && valueInput.length > 0) {
+            displayItems(people.filter(person => person.name.includes(valueInput.toLowerCase()))
+            // all this thing "people.filter(person => person.name.includes(valueInput.toLowerCase())" is passed to function
+            );
+        }
     } catch (error) {
         console.error(error);
     }
-
 });
 
 function displayItems(itemsFind) {
+    clearFoundItemsList();
     for (const item of itemsFind) {
         let itemElement = document.createElement('li');
-        let listItems = document.getElementById('list-items');
+
         let text = document.createTextNode(item.name);
         itemElement.appendChild(text);
         listItems.appendChild(itemElement);
+    }
+}
+
+function clearFoundItemsList() {
+    while(listItems.firstChild) {
+        listItems.removeChild(listItems.firstChild)
     }
 }
