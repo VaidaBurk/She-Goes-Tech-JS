@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mb-3">TRANSLATE</h2>
+        <form action="">
+            <div class="row mb-3 align-items-start">
+                <div class="col-4">
+                    <label for="source-lang">FROM:</label>
+                    <select name="source-lang" id="source-lang" class="form-select-sm">
+                        <option value="lv">LV</option>
+                        <option value="lt">LT</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="lang">TO:</label>
+                    <select name="lang" id="lang" class="form-select-sm">
+                        <option value="lv">LV</option>
+                        <option value="lt">LT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div>
+                        <input type="text" name="word-to-translate" id="get-text" class="form-control"
+                            placeholder="Enter word to translate...">
+                    </div>
+                </div>
+                <div id="to-text" class="col-4 border border-secondary rounded"></div>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-3">Translate</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+    let formText = document.querySelector('form');
+    let inputValue = document.getElementById('get-text');
+    let showValue = document.getElementById('to-text');
+    let langSource = document.getElementById('source-lang');
+    let langSelect = document.getElementById('lang');
+
+    formText.addEventListener('submit', () => {
+        event.preventDefault();
+        const encodedParams = new URLSearchParams();
+        encodedParams.append("source", langSource.value);
+        encodedParams.append("target", langSelect.value);
+        encodedParams.append("q", inputValue.value);
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'Accept-Encoding': 'application/gzip',
+                'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com',
+                'X-RapidAPI-Key': '125a1d1741msh07b331c5ca1994dp1675cejsnd66baa5d2be3'
+            },
+            body: encodedParams
+        };
+
+        fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
+            .then(response => response.json())
+            .then(response => {
+                showValue.innerHTML = response.data.translations[0].translatedText;
+            })
+            .catch(err => console.error(err));
+    })
+
+
+</script>
+
+</html>
